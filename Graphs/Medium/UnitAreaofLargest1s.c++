@@ -39,7 +39,7 @@ void regions(int a[][MAX], int m, int n, int i, int j, int &count)
     if (a[i][j] == 0 || i < 0 || j < 0 || i >= m || j >= n)
         return;
     count++;
-    a[i][j] = 0;
+    a[i][j] = 0; // mark visited
     regions(a, m, n, i, j - 1, count);
     regions(a, m, n, i, j + 1, count);
     regions(a, m, n, i - 1, j, count);
